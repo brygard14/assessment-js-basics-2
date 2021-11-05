@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    name: 'Veggie', 
+    price: 9.99,
+    category: 'entree',
+    popularity: 10,
+    rating: 5,
+    tags: ['vegetarian', 'vegan', 'plant-based'],
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,9 @@
 */
 
 //CODE HERE
+const {price} = pizza
 
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +82,9 @@
 */
 
 //CODE HERE
+const {category} = pizza
 
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,7 +99,48 @@
 */
 
 //CODE HERE
-
+const foodArr = [
+    {
+        name: 'Spaghetti and Meatballs', 
+        price: 11.99,
+        category: 'entree',
+        popularity: 9,
+        rating: 5,
+        tags: ['meat-lovers', 'kid-friendly'],
+    },
+    {
+        name: 'Garden Salad', 
+        price: 6.95,
+        category: 'side',
+        popularity: 7,
+        rating: 4,
+        tags: ['vegetarian', 'vegan', 'plant-based', 'low-calorie'],
+    },
+    {
+        name: 'Fries', 
+        price: 4.50,
+        category: 'side',
+        popularity: 10,
+        rating: 5,
+        tags: ['vegetarian', 'vegan', 'kid-friendly'],
+    },
+    {
+        name: 'Bruschetta', 
+        price: 10.50,
+        category: 'appetizer',
+        popularity: 9,
+        rating: 5,
+        tags: ['plant-based', 'sharing'],
+    },
+    {
+        name: 'Wine', 
+        price: 8.75,
+        category: 'beverage',
+        popularity: 6,
+        rating: 4,
+        tags: ['21+'],
+    }
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,8 +157,8 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
+// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
 
 //////////////////PROBLEM 5////////////////////

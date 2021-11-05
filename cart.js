@@ -34,8 +34,10 @@ const cart = [
 ]
 
 //CODE HERE
-function sum(cart.price) = 
-
+// function priceSum(cart) {
+//       const totalNumber = utah + california + texas + arizona;
+//       console.log(totalNumber)
+//     }
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
@@ -56,8 +58,14 @@ function sum(cart.price) =
 */
 
 //CODE HERE
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    const finalPrice = cartTotal + (cartTotal * tax) - couponValue
+    return finalPrice
+}
 
+// const test = calcFinalPrice(10, 2, .01)
 
+// console.log(test)
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -81,7 +89,10 @@ function sum(cart.price) =
 
 /*
     TEXT ANSWER HERE
-
+    name: need to know how to refer to customer
+    favFood: helps in recommending items to customer
+    allergies: helps in avoiding certain recommendations to customer
+    dietRestrict: need to know in order to make substitutions to items on menu
 */
 
 /*
@@ -90,3 +101,9 @@ function sum(cart.price) =
 */
 
 //CODE HERE
+const customer = {
+        name: 'Julie', 
+        favFood: 'peanut butter',
+        allergies: 'bananas',
+        dietRestrict: 'vegetarian'
+    }

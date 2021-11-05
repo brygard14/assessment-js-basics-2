@@ -20,8 +20,15 @@
 */
 
 //CODE HERE
-
-
+class Employee {
+    constructor(name, shift) {
+        this.name = name;
+        this.shift = shift;
+    }
+    getSchedule(obj) {
+        console.log(`${this.name} works on ${this.shift}`)
+    }
+}
 
 /*
     Create a new instance of your class.
@@ -34,6 +41,7 @@
 */
 
 //CODE HERE
+const empOne = new Employee('Alan', 'weekday afternoons');
 
 /*
     Call the `getSchedule` method on the
@@ -41,6 +49,7 @@
 */
 
 //CODE HERE
+empOne.getSchedule()
 
 
 /*
@@ -55,9 +64,10 @@
     dot or bracket notation.
 */
 
-//CODE HERE
+//CODE HERE    ~~~~~ COME BACK TO ~~~~~
+// let empTwo = {[this.name]: 'Bry', ...empOne};
 
-
+// console.log(empTwo)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -83,8 +93,18 @@
 */
 
 //CODE HERE
-
-
+class Manager extends Employee {
+    constructor(name, shift, employees) {
+        super(name, shift);
+        this.employees = employees;
+    }
+    getEmployees() {
+        console.log(`${this.name} manages ${(this.employees).join(' and ')}`)
+    }
+    addEmployees(emp) {
+        (this.employees).push()
+    }
+}
 
 /*
     Create a new instance of your class.
@@ -98,7 +118,7 @@
 */
 
 //CODE HERE
-
+const manager = new Manager('Betty', 'weekday afternoons', ['Cece', 'Schmidt']);
 
 /*
     Call the `getEmployees` method on the
@@ -106,6 +126,7 @@
 */
 
 //CODE HERE
+manager.getEmployees()
 
 /*
     Call the `addEmployee` method on the 
@@ -114,6 +135,7 @@
 */
 
 //CODE HERE 
+manager.addEmployees('Winston')
 
 /*
     Call the `getEmployees` method on the
@@ -122,3 +144,4 @@
 */
 
 //CODE HERE
+manager.getEmployees(manager)

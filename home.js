@@ -22,10 +22,10 @@
 */
 
 //CODE HERE
+const greetUser = username => `Welcome back, ${username}!`;
 
-
-
-
+// const greeting = greetUser('brygard')
+// console.log(greeting)
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -50,7 +50,18 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
+const canWeDeliver = zipCode => {
+    for(i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if(zipCode === deliveryAreaZipCodes[i]) {
+            console.log("You're in our delivery zone!");
+            break;
+        } else {
+            console.log("Sorry, we can't deliver to that address.");
+        }
+    } 
+}
 
+// canWeDeliver(85206)
 
 
 /* 
@@ -71,7 +82,15 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+const canWeDeliverTwo = zipCode => {
+    if(deliveryAreaZipCodes.includes(zipCode)) {
+        console.log("You're in our delivery zone!");
+    } else {
+        console.log("Sorry, we can't deliver to that address.");
+    }
+}
 
+// canWeDeliverTwo(85206)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -107,7 +126,8 @@ const deals = [
 */
 
 //CODE HERE
-
+deals.title = deals.title.replace('15% Off!', '10% Off!');
+console.log(deals)
 
 
 /*
