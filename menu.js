@@ -38,7 +38,7 @@ const pizza = {
     popularity: 10,
     rating: 5,
     tags: ['vegetarian', 'vegan', 'plant-based'],
-}
+};
 
 
 //////////////////PROBLEM 2////////////////////
