@@ -51,7 +51,6 @@ const empOne = new Employee('Alan', 'weekday afternoons');
 //CODE HERE
 empOne.getSchedule()
 
-
 /*
     Make a copy of the empOne object
     using the spread operator.
@@ -65,9 +64,9 @@ empOne.getSchedule()
 */
 
 //CODE HERE    ~~~~~ COME BACK TO ~~~~~
-// let empTwo = {[this.name]: 'Bry', ...empOne};
+let empTwo = {...empOne, name:'Bry'};
 
-// console.log(empTwo)
+console.log(empTwo)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -102,7 +101,7 @@ class Manager extends Employee {
         console.log(`${this.name} manages ${(this.employees).join(' and ')}`)
     }
     addEmployees(emp) {
-        (this.employees).push()
+        (this.employees).push(emp)
     }
 }
 

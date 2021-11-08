@@ -33,14 +33,11 @@ const cart = [
     }
 ]
 
-//CODE HERE
-// function priceSum(cart) {
-//       const totalNumber = utah + california + texas + arizona;
-//       console.log(totalNumber)
-//     }
+const summedPrice = cart.reduce((total, item) => {
+    return total + item.price
+}, 0)
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -63,9 +60,9 @@ function calcFinalPrice(cartTotal, couponValue, tax) {
     return finalPrice
 }
 
-// const test = calcFinalPrice(10, 2, .01)
+const test = calcFinalPrice(10, 2, .01)
 
-// console.log(test)
+console.log(test)
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -102,8 +99,10 @@ function calcFinalPrice(cartTotal, couponValue, tax) {
 
 //CODE HERE
 const customer = {
-        name: 'Julie', 
-        favFood: 'peanut butter',
-        allergies: 'bananas',
-        dietRestrict: 'vegetarian'
-    }
+    name: 'Julie', 
+    favFood: 'peanut butter',
+    allergies: 'bananas',
+    dietRestrict: 'vegetarian'
+}
+
+console.log(customer)

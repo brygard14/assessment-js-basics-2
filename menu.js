@@ -14,7 +14,7 @@
     properties: 
         - name (string)
         - price (number)
-        - category (string)
+        - category (strimenu.jng)
         - popularity (number)
         - rating (number)
         - tags (array of strings)
@@ -38,8 +38,7 @@ const pizza = {
     popularity: 10,
     rating: 5,
     tags: ['vegetarian', 'vegan', 'plant-based'],
-};
-
+}; 
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -156,10 +155,18 @@ const foodArr = [
 */
 
 //CODE HERE
+const filteredFood = foodArr.filter(function(pizzaObj) {
+    // return pizzaObj.tags.includes('vegetarian')
+    let toSave = false; 
 
+    for (let i = 0; i < pizzaObj.tags.length; i++) {
+        if (pizzaObj.tags[i] === 'vegetarian') toSave = true; 
+    }
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+    return toSave; 
+}) 
 
+console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -201,7 +208,10 @@ const foodArr = [
 */
 
 //CODE HERE
-
+const filterByProperty = (property, number, type) => {
+    let foodFilter = [];
+    return foodFilter;
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -211,3 +221,12 @@ const foodArr = [
 */
 
 //CODE HERE
+console.log(filterByProperty(rating, 4, above))
+
+
+// let foodFilter = [];
+// for(let i = 0; i < foodArr.length; i++) {
+//     if(foodArr[i].rating > 4) {
+//         console.log(true)
+//         foodFilter.push[i];
+//     }
